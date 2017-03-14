@@ -1,0 +1,23 @@
+<table class="table table-striped" [mfData]="students" #mf="mfDataTable">
+  <thead>
+    <tr>
+      <th style="width: 10%">
+        <mfDefaultSorter by="id">ID</mfDefaultSorter>
+      </th>
+      <th style="width: 20%">
+        <mfDefaultSorter by="partyName">Name</mfDefaultSorter>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of mf.data">
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>
+        <button (click)="gotoDetail(item)" class="btn btn-info">
+Details
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

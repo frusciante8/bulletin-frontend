@@ -1,0 +1,6 @@
+<div *ngIf="selectedEvaluation">
+  <h2>{{ selectedEvaluation.name }}: /{{selectedEvaluation.max}} ({{selectedEvaluation.category }} {{ selectedEvaluation.subCategory}})</h2>
+  <div *ngFor="let result of selectedEvaluation.results">
+    {{ result.student.firstName }} {{ result.result}}
+  </div>
+</div>
